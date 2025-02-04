@@ -1,0 +1,973 @@
+<!DOCTYPE html> 
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>City West View Restobar</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <style>
+      header.scrolled .menus > ul > li::after {
+        background-color: var(--text-color-white);
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="loader">
+      <i class="fas fa-utensils loader-icone"></i>
+      <p>City West View</p>
+      <div class="loader-ellipses">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <header>
+      <div class="container header my-3 d-none d-lg-flex">
+        <div class="logo">
+          <a href="./index.html">
+            <i class="fa fa-utensils me-3"></i>
+            <h1 class="mb-0">City West View</h1>
+          </a>
+        </div>
+        <div class="menus">
+          <ul class="d-flex mb-0">
+            <li class="list-unstyled py-2">
+              <a class="text-decoration-none text-uppercase p-4" href="./index.html">Home</a>
+            </li>
+            <li class="list-unstyled py-2">
+              <a class="text-decoration-none text-uppercase p-4" href="./about.html">About</a>
+            </li>
+            <li class="list-unstyled py-2">
+              <a class="text-decoration-none text-uppercase p-4" href="./reservation.html">Reservation</a>
+            </li>
+            <li class="list-unstyled py-2">
+              <a class="text-decoration-none text-uppercase p-4" href="./menu.html">Menu</a>
+            </li>
+            <li class="list-unstyled py-2">
+              <a class="text-decoration-none text-uppercase p-4" href="./contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="icons">
+          <a class="text-decoration-none" id="searchBtn" href="#">
+            <i class="fa fa-search me-3"></i>
+          </a>
+          <a class="text-decoration-none" id="shoppingbutton" href="#">
+            <i class="fa fa-shopping-bag me-3"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="d-flex justify-content-around py-3 align-items-center d-lg-none">
+        <div id="hamburger">
+          <i class="fa fa-2x fa-bars me-3 text-white"></i>
+        </div>
+        <div class="mobile-nav-logo">
+          <div class="logo">
+            <a href="./index.html">
+              <i class="fa fa-utensils me-3"></i>
+              <h1 class="mb-0">City West View</h1>
+            </a>
+          </div>
+        </div>
+        <div class="mobile-nav-icons">
+          <div class="icons">
+            <a class="text-decoration-none" id="searchBtnMobile" href="#">
+              <i class="fa fa-search me-3"></i>
+            </a>
+            <a class="text-decoration-none" id="shoppingbuttonMobile" href="#">
+              <i class="fa fa-shopping-bag me-3"></i>
+            </a>
+          </div>
+        </div>
+        <div class="position-fixed w-75 bg-white h-100 top-0 start-0" id="mobile-menu">
+          <div id="hamburger-cross" class="d-flex justify-content-end align-items-center py-2">
+            <i class="fa fa-2x fa-plus me-3 "></i>
+          </div>
+          <div class="menus">
+            <ul class="d-flex flex-column ps-2 mb-0 mt-4">
+              <li class="list-unstyled py-2">
+                <a class="text-dark text-decoration-none text-uppercase p-4" href="#">Home</a>
+              </li>
+              <li class="list-unstyled py-2">
+                <a class="text-dark text-decoration-none text-uppercase p-4" href="./about.html">About</a>
+              </li>
+              <li class="list-unstyled py-2">
+                <a class="text-dark text-decoration-none text-uppercase p-4" href="./reservation.html">Reservation</a>
+              </li>
+              <li class="list-unstyled py-2">
+                <a class="text-dark text-decoration-none text-uppercase p-4" href="./menu.html">Menu</a>
+              </li>
+              <li class="list-unstyled py-2">
+                <a class="text-dark text-decoration-none text-uppercase p-4" href="./contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="search-bar d-none" id="search-container">
+      <div class="close-btn" id="search-close-btn">
+        <i class="fa fa-close"></i>
+      </div>
+      <div class="search-bar-wrapper"> 
+        <input type="search" placeholder="Search for food, drinks, or rooms..." />
+        <div class="search-button">
+          <a href="#"><i class="fa fa-search"></i></a>
+        </div>
+      </div>
+      
+      <div class="shopping-cart">
+        <div class="shopping-cart-header d-flex justify-content-between">
+          <h2>Review Your Order - City West Restobar</h2>
+          <i class="fa fa-close"></i>
+        </div>
+        <div class="shopping-cart-body">
+          <div class="row shopping-cart-item d-flex justify-content-between">
+            <div class="col-2 d-flex align-items-center">
+              <img src="./assets/images/grilled-tilapia.jpg" alt="Grilled Tilapia">
+            </div>
+            <div class="col-8">
+              <h3>Grilled Tilapia with Spices</h3>
+              <div class="shopping-cart-counter">
+                <i class="fa fa-minus"></i>
+                <span>1</span>
+                <i class="fa fa-plus"></i>
+              </div>
+            </div>
+            <div class="col-2 item-price d-flex align-items-end">
+              <p class="mb-0 text-center">RWF 15,000</p>
+            </div>
+          </div>
+          <div class="row shopping-cart-item d-flex justify-content-between">
+            <div class="col-2 d-flex align-items-center">
+              <img src="./assets/images/nyama-choma.jpg" alt="Nyama Choma">
+            </div>
+            <div class="col-8">
+              <h3>Nyama Choma with Ugali</h3>
+              <div class="shopping-cart-counter">
+                <i class="fa fa-minus"></i>
+                <span>1</span>
+                <i class="fa fa-plus"></i>
+              </div>
+            </div>
+            <div class="col-2 item-price d-flex align-items-end">
+              <p class="mb-0 text-center">RWF 18,000</p>
+            </div>
+          </div>
+          <div class="row shopping-cart-item d-flex justify-content-between">
+            <div class="col-2 d-flex align-items-center">
+              <img src="./assets/images/local-beer.jpg" alt="Local Beer">
+            </div>
+            <div class="col-8">
+              <h3>Local Brew - Primus (750ml)</h3>
+              <div class="shopping-cart-counter">
+                <i class="fa fa-minus"></i>
+                <span>1</span>
+                <i class="fa fa-plus"></i>
+              </div>
+            </div>
+            <div class="col-2 item-price d-flex align-items-end">
+              <p class="mb-0 text-center">RWF 3,500</p>
+            </div>
+          </div>
+        </div>
+        <div class="shopping-cart-footer">
+          <div class="d-flex justify-content-between px-3 py-2">
+            <div>
+              <h2 class="mb-0">Subtotal</h2>
+              <p class="mb-0">Delivery available in Kamembe & Gihundwe</p>
+            </div>
+            <div class="d-flex align-items-end">
+              <p class="footet-total-price mb-0">RWF 36,500</p>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between px-2">
+            <div class="footer-checkout">
+              <div class="anim-layer"></div>
+              <a href="#">Proceed to Checkout</a>
+            </div>
+            <div class="footer-shopping">
+              <div class="anim-layer"></div>
+              <a href="#">Continue Shopping</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <main>
+        <section class="banner py-5">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-md-6 banner-content pe-5" data-aos="fade-right" data-aos-delay="3000">
+                        <h1 class="display-2">Welcome to City West Restobar</h1>
+                        <p>
+                            Experience the best in hospitality with our delicious meals, refreshing drinks, and premium rooms. 
+                            Enjoy a perfect blend of affordability, quality service, and a warm ambiance, all in the heart of City-West.
+                        </p>
+                        <div class="book-a-table">
+                            <div class="anim-layer"></div>
+                            <a href="#">Book a Table</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 banner-img" data-aos="fade-left" data-aos-delay="3000">
+                        <img class="img img-fluid mt-5 mt-lg-0" src="./assets/images/citywest-banner.jpg" alt="City West Restobar">
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="services my-5 py-5">
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-md-3">
+                        <div class="cards px-4 py-5" data-aos="fade-right">
+                            <div class="anim-layer"></div>
+                            <div class="icon"> 
+                                <i class="fa fa-3x fa-user-tie mb-4"></i>
+                            </div>
+                            <div class="heading">
+                                <h5>Expert Chefs</h5>
+                            </div>
+                            <div class="para">
+                                <p>Our talented chefs prepare exquisite meals tailored to your taste.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="cards px-4 py-5" data-aos="fade-down">
+                            <div class="anim-layer"></div>
+                            <div class="icon">
+                                <i class="fa fa-3x fa-utensils mb-4"></i>
+                            </div>
+                            <div class="heading">
+                                <h5>Quality Cuisine</h5>
+                            </div>
+                            <div class="para">
+                                <p>We serve a variety of dishes made from the freshest ingredients.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="cards px-4 py-5" data-aos="fade-up">
+                            <div class="anim-layer"></div>
+                            <div class="icon">
+                                <i class="fa fa-3x fa-cart-plus mb-4"></i>
+                            </div>
+                            <div class="heading">
+                                <h5>Order Online</h5>
+                            </div>
+                            <div class="para">
+                                <p>Conveniently place your food and room reservations online.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="cards px-4 py-5" data-aos="fade-left">
+                            <div class="anim-layer"></div>
+                            <div class="icon">
+                                <i class="fa fa-3x fa-headset mb-4"></i>
+                            </div>
+                            <div class="heading">
+                                <h5>24/7 Service</h5>
+                            </div>
+                            <div class="para">
+                                <p>Our dedicated team is available round the clock to serve you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class="about-us py-5 my-5">
+            <div class="container">
+                <div class="row gy-5 g-lg-5 align-items-center">
+                    <div class="col-lg-6 about-img-box">
+                        <div class="row g-3">
+                            <div class="col-6" data-aos="fade-right">
+                                <img class="img-fluid rounded w-100" src="./assets/images/citywest-1.jpg">
+                            </div>
+                            <div class="col-6 text-right" data-aos="fade-down">
+                                <img class="img-fluid rounded w-75" src="./assets/images/citywest-2.jpg">
+                            </div>
+                            <div class="col-6 text-end" data-aos="fade-right">
+                                <img class="img-fluid rounded w-75" src="./assets/images/citywest-3.jpg">
+                            </div>
+                            <div class="col-6 text-end" data-aos="fade-up">
+                                <img class="img-fluid rounded w-100" src="./assets/images/citywest-4.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 about-content" data-aos="fade-left">
+                        <h5 class="section-title">About Us</h5>
+                        <h2 class="mb-4 dis">Welcome to <i class="fa fa-utensils me-2"></i>City West Restobar</h2>
+                        <p class="mb-4">Nestled in City-West, we offer a perfect combination of hospitality and excellence. Whether you're here for a meal, drinks, or a comfortable stay, we guarantee an unforgettable experience.</p>
+                        <p class="mb-4">Our restobar is dedicated to providing quality service, affordability, and customer satisfaction. We prioritize your comfort and strive to create a welcoming atmosphere for all our guests.</p>
+                        <div class="row g-4 mb-4 about-extra">
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center px-3 about-experience">
+                                    <h1 class="flex-shrink-0 mb-0">10+</h1>
+                                    <div class="ps-4">
+                                        <p class="mb-0">Years of</p>
+                                        <h6 class="text-uppercase mb-0">Experience</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center px-3 about-popular">
+                                    <h1 class="flex-shrink-0 mb-0">100+</h1>
+                                    <div class="ps-4">
+                                        <p class="mb-0">Satisfied</p>
+                                        <h6 class="text-uppercase mb-0">Customers</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book-a-table">
+                            <div class="anim-layer"></div>
+                            <a href="#">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <section class="our-menu py-5 my-5">
+      <div class="container">
+          <div class="row" data-aos="fade-right">
+              <div class="section-title text-center">
+                  <h5>Our Menu</h5>
+                  <h2 class="display-5 fw-bold">Delicious Meals at Affordable Prices</h2>
+              </div>
+          </div>
+          <div class="row position-relative">
+              <div data-aos="fade-left" class="slider slider-indicators-wrapper justify-content-center">
+                  <div class="slider-indicators">
+                      <div class="indicators-icon active text-center">
+                          <i class="fas fa-coffee fa-2x"></i>
+                      </div>
+                      <div class="indicators-title text-center">
+                          <h5>Breakfast</h5>
+                      </div>
+                  </div>
+                  <div class="slider-indicators">
+                      <div class="indicators-icon text-center">
+                          <i class="fas fa-utensils fa-2x"></i>
+                      </div>
+                      <div class="indicators-title text-center">
+                          <h5>Lunch</h5>
+                      </div>
+                  </div>
+                  <div class="slider-indicators">
+                      <div class="indicators-icon text-center">
+                          <i class="fas fa-hamburger fa-2x"></i>
+                      </div>
+                      <div class="indicators-title text-center">
+                          <h5>Dinner</h5>
+                      </div>
+                  </div>
+                  <div class="slider-indicators">
+                      <div class="indicators-icon text-center">
+                          <i class="fas fa-ice-cream fa-2x"></i>
+                      </div>
+                      <div class="indicators-title text-center">
+                          <h5>Desserts</h5>
+                      </div>
+                  </div>
+                  <div class="slider-indicators">
+                      <div class="indicators-icon text-center">
+                          <i class="fas fa-cocktail fa-2x"></i>
+                      </div>
+                      <div class="indicators-title text-center">
+                          <h5>Drinks</h5>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div id="our-menus" class="slider" data-aos="fade-up">
+              <div>
+                  <div class="row my-5 py-3">
+                      <div class="col-lg-5">
+                          <div class="pb-5 pb-lg-0">
+                              <img width="90%" src="./assets/images/menu-breakfast.png" alt="">
+                          </div>
+                      </div>
+                      <div class="col-lg-7">
+                          <div class="item-wrapper d-flex justify-content-between">
+                              <div class="item-left">
+                                  <h5>City West Special Breakfast</h5>
+                                  <p>Freshly brewed Rwandan coffee served with eggs, toast, and local honey.</p>
+                              </div>
+                              <div class="item-right">
+                                  <span class="item-price"><span class="price-symbol">RWF</span> 5,000</span>
+                                  <div class="item-btn">
+                                      <a href="#">Order</a>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="item-wrapper d-flex justify-content-between">
+                              <div class="item-left">
+                                  <h5>Classic Rwandan Lunch</h5>
+                                  <p>Grilled chicken, rice, and vegetable sauce with a refreshing juice.</p>
+                              </div>
+                              <div class="item-right">
+                                  <span class="item-price"><span class="price-symbol">RWF</span> 8,000</span>
+                                  <div class="item-btn">
+                                      <a href="#">Order</a>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="item-wrapper d-flex justify-content-between">
+                              <div class="item-left">
+                                  <h5>Nyama Choma Dinner</h5>
+                                  <p>Grilled beef served with ugali, kachumbari, and a side of spicy sauce.</p>
+                              </div>
+                              <div class="item-right">
+                                  <span class="item-price"><span class="price-symbol">RWF</span> 12,000</span>
+                                  <div class="item-btn">
+                                      <a href="#">Order</a>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="item-wrapper d-flex justify-content-between">
+                              <div class="item-left">
+                                  <h5>Fresh Fruit Salad</h5>
+                                  <p>A mix of seasonal fruits served with yogurt and honey.</p>
+                              </div>
+                              <div class="item-right">
+                                  <span class="item-price"><span class="price-symbol">RWF</span> 4,500</span>
+                                  <div class="item-btn">
+                                      <a href="#">Order</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+  <div class="item-wrapper d-flex justify-content-between">
+    <div class="item-left">
+      <h5>Nyama Choma Platter</h5>
+      <p>Grilled beef served with kachumbari and ugali.</p>
+    </div>
+    <div class="item-right">
+      <span class="item-price">
+        <span class="price-symbol">RWF</span>
+        10,000
+      </span>
+      <div class="item-btn">
+        <a href="#">Order</a>
+      </div>
+    </div>
+  </div>
+  <div class="item-wrapper d-flex justify-content-between">
+    <div class="item-left">
+      <h5>Spicy Chicken Soup</h5>
+      <p>Rich and flavorful soup with tender chicken and a spicy kick.</p>
+    </div>
+    <div class="item-right">
+      <span class="item-price">
+        <span class="price-symbol">RWF</span>
+        7,500
+      </span>
+      <div class="item-btn">
+        <a href="#">Order</a>
+      </div>
+    </div>
+  </div>
+  <div class="item-wrapper d-flex justify-content-between">
+    <div class="item-left">
+      <h5>City West Special Breakfast</h5>
+      <p>Eggs, toast, bacon, and fresh juice.</p>
+    </div>
+    <div class="item-right">
+      <span class="item-price">
+        <span class="price-symbol">RWF</span>
+        8,000
+      </span>
+      <div class="item-btn">
+        <a href="#">Order</a>
+      </div>
+    </div>
+  </div>
+  <div class="item-wrapper d-flex justify-content-between">
+    <div class="item-left">
+      <h5>Fish and Chips</h5>
+      <p>Crispy deep-fried fish served with golden fries.</p>
+    </div>
+    <div class="item-right">
+      <span class="item-price">
+        <span class="price-symbol">RWF</span>
+        12,000
+      </span>
+      <div class="item-btn">
+        <a href="#">Order</a>
+      </div>
+    </div>
+  </div>
+  <div class="item-wrapper d-flex justify-content-between">
+    <div class="item-left">
+      <h5>Beef Brochettes</h5>
+      <p>Marinated beef skewers served with plantains.</p>
+    </div>
+    <div class="item-right">
+      <span class="item-price">
+        <span class="price-symbol">RWF</span>
+        6,500
+      </span>
+      <div class="item-btn">
+        <a href="#">Order</a>
+      </div>
+    </div>
+  </div>
+  <div class="item-wrapper d-flex justify-content-between"> 
+    <div class="item-left">
+      <h5>Grilled Tilapia with Spiced Rice</h5>
+      <p>A deliciously seasoned tilapia fillet served with fragrant spiced rice and fresh vegetables.</p>
+    </div>
+    <div class="item-right">
+      <span class="item-price">
+        <span class="price-symbol">RWF</span>
+        15,000
+      </span>
+      <div class="item-btn">
+        <a href="#">Order</a>
+      </div>
+    </div>
+  </div>
+  <div class="item-wrapper d-flex justify-content-between">
+    <div class="item-left">
+      <h5>Nyama Choma with Ugali</h5>
+      <p>Authentic grilled beef served with traditional Ugali and a side of Kachumbari.</p>
+    </div>
+    <div class="item-right">
+      <span class="item-price">
+        <span class="price-symbol">RWF</span>
+        12,000
+      </span>
+      <div class="item-btn">
+        <a href="#">Order</a>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </section>
+  
+  <section class="testimonials py-5 my-5">
+    <div class="container py-5">
+      <div class="row" data-aos="fade-right">
+        <div class="section-title text-center">
+          <h5>Testimonial</h5>
+          <h2 class="display-5 fw-bold">What Our Customers Say</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="testimonial-slider-wrapper" data-aos="fade-up">
+          <div class="slider-content pt-4 pb-4 mx-4">
+            <div>
+              <div class="testi-content">
+                <p>The best grilled tilapia in town! Amazing service and great ambiance. Highly recommended!</p>
+              </div>
+              <div class="testi-info">
+                <span class="name">Jean Bosco</span>
+                <span class="position">Local Guide</span>
+              </div>
+            </div>
+            <div>
+              <div class="testi-content">
+                <p>Fantastic place for a night out with friends. The nyama choma is perfectly cooked!</p>
+              </div>
+              <div class="testi-info">
+                <span class="name">Aline Uwimana</span>
+                <span class="position">Food Blogger</span>
+              </div>
+            </div>
+          </div>
+          <div class="slider-nav-wrapper mx-5">
+            <div class="slider-nav">
+              <div class="slider-nav-img active">
+                <img src="./assets/images/testi-1.jpg" alt="Customer 1">
+              </div>
+              <div class="slider-nav-img">
+                <img src="./assets/images/testi-2.jpg" alt="Customer 2">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="our-chefs py-5">
+    <div class="container">
+      <div class="row" data-aos="fade-right">
+        <div class="section-title text-center">
+          <h5>Meet Our</h5>
+          <h2 class="display-6 fw-bold">Expert Chefs</h2>
+        </div>
+      </div>
+      <div class="row our-chef-slider-wrapper py-5" data-aos="fade-left">
+        <div class="col-lg-4">
+          <div class="our-chef-slider d-flex flex-column align-items-center gap-4">
+            <img width="200px" src="./assets/images/team-1.png" alt="Head Chef">
+            <div class="chef-slider-content">
+              <h5 class="text-center d-block">Eric Niyonsenga</h5>
+              <p class="text-center mb-0">Executive Chef</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="our-chef-slider d-flex flex-column align-items-center gap-4">
+            <img width="200px" src="./assets/images/team-2.png" alt="Chef">
+            <div class="chef-slider-content">
+              <h5 class="text-center d-block">Claudine Ingabire</h5>
+              <p class="text-center mb-0">Sous Chef</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="reservation"> 
+    <img class="d-md-none d-lg-block" src="./assets/images/find-a-table.png" alt="City West Restobar Reservation">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 py-5 reservation-content px-5" data-aos="fade-right">
+                <div class="reservation-column py-5 px-3">
+                    <h2 class="text-center text-white display-6 fw-bold">Make A Reservation</h2>
+                    <p class="text-center text-white">Call us directly at <span>+250 789 221 794</span></p>
+                    <div class="row mt-5 pt-3">
+                        <div class="col-12 col-lg-6">
+                            <div class="input d-flex align-items-center">
+                                <i class="fa fa-phone py-2 px-3"></i>
+                                <input class="form-control bg-transparent border-0 px-3" type="text" placeholder="Your Phone Number">
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 mt-4 mt-lg-0">
+                            <div class="input d-flex align-items-center">
+                                <i class="fa fa-person py-2 px-3"></i>
+                                <select class="form-select bg-transparent border-0">
+                                    <option>1 Person</option>
+                                    <option>2 People</option>
+                                    <option>3 People</option>
+                                    <option>4 People</option>
+                                    <option>5 People</option>
+                                    <option>6+ People</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-12 col-lg-6">
+                            <div class="input d-flex align-items-center">
+                                <i class="fa fa-calendar py-2 px-3"></i>
+                                <input class="form-control datepicker bg-transparent border-0 px-3" type="date">
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-6 mt-4 mt-lg-0">
+                            <div class="input d-flex align-items-center">
+                                <i class="fa fa-clock py-2 px-3"></i>
+                                <select class="form-select bg-transparent border-0">
+                                    <option>12:00 PM</option>
+                                    <option>1:00 PM</option>
+                                    <option>2:00 PM</option>
+                                    <option>6:00 PM</option>
+                                    <option>7:00 PM</option>
+                                    <option>8:00 PM</option>
+                                    <option>9:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center mt-5 pt-3">
+                        <div class="book-a-table">
+                            <div class="anim-layer"></div>
+                            <a href="#">Find Table</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 d-none d-md-block reservation-bg" data-aos="fade-left"></div>
+        </div>
+    </div>
+</section>
+<div class="row m-0"> 
+  <div class="col-md-4 p-0">
+    <div data-aos="fade-up" class="gallery-image-five"></div>
+  </div>
+  <div class="col-md-8 p-0">
+    <div data-aos="fade-up" class="gallery-image-six"></div>
+  </div>
+</div>
+</div>
+<div class="col-md-3 p-0">
+  <div data-aos="fade-up-left" class="gallery-image gallery-image-four"></div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="our-blog pt-5 my-5">
+  <div class="container">
+    <div class="row">
+      <div class="section-title text-center" data-aos="fade-right">
+        <h5>Latest News</h5>
+        <h2 class="display-6 fw-bold">City West Restobar Blog</h2>
+      </div>
+    </div>
+    <div class="row pt-5">
+      <div class="col-lg-4 mb-5 mb-lg-0">
+        <div class="card" data-aos="fade-up-right">
+          <div class="blog-info d-flex py-3">
+            <div class="blog-view px-3">
+              <i class="fas fa-eye"></i>
+              <span>150</span>
+            </div>
+            <div class="blog-comment px-3">
+              <i class="fas fa-comment"></i>
+              <span>35</span>
+            </div>
+            <div class="blog-author">
+              <p class="mb-0 ps-3">Post By City West Admin</p>
+            </div>
+          </div>
+          <div class="blog-featured-img">
+            <img class="w-100" src="./assets/images/blog-food-1.jpg" alt="Delicious Grill">
+          </div>
+          <div class="blog-content px-4 pt-5 pb-4 position-relative">
+            <div class="blog-date">
+              <span class="day">15</span>
+              <span class="month">Jan</span>
+            </div>
+            <h3 class="blog-title">
+              <a href="#">Top 5 Must-Try Dishes at City West</a>
+            </h3>
+            <p class="blog-description">
+              Experience our special grilled meats, fresh seafood, and signature cocktails for an unforgettable dining experience.
+            </p>
+            <div class="blog-readmore text-end">
+              <a class="text-black text-decoration-none" href="#">
+                Read More <i class="fa fa-angle-double-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-5 mb-lg-0">
+        <div class="card" data-aos="fade-down">
+          <div class="blog-info d-flex py-3">
+            <div class="blog-view px-3">
+              <i class="fas fa-eye"></i>
+              <span>120</span>
+            </div>
+            <div class="blog-comment px-3">
+              <i class="fas fa-comment"></i>
+              <span>20</span>
+            </div>
+            <div class="blog-author">
+              <p class="mb-0 ps-3">Post By City West Admin</p>
+            </div>
+          </div>
+          <div class="blog-featured-img">
+            <img class="w-100" src="./assets/images/blog-events.jpg" alt="Live Music Night">
+          </div>
+          <div class="blog-content px-4 pt-5 pb-4 position-relative">
+            <div class="blog-date">
+              <span class="day">20</span>
+              <span class="month">Jan</span>
+            </div>
+            <h3 class="blog-title">
+              <a href="#">Upcoming Events: Live Music & BBQ Nights</a>
+            </h3>
+            <p class="blog-description">
+              Join us for live music, DJ performances, and special weekend BBQ nights. Reserve your table now!
+            </p>
+            <div class="blog-readmore text-end">
+              <a class="text-black text-decoration-none" href="#">
+                Read More <i class="fa fa-angle-double-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-5 mb-lg-0">
+        <div class="card" data-aos="fade-up-left">
+          <div class="blog-info d-flex py-3">
+            <div class="blog-view px-3">
+              <i class="fas fa-eye"></i>
+              <span>180</span>
+            </div>
+            <div class="blog-comment px-3">
+              <i class="fas fa-comment"></i>
+              <span>50</span>
+            </div>
+            <div class="blog-author">
+              <p class="mb-0 ps-3">Post By City West Admin</p>
+            </div>
+          </div>
+          <div class="blog-featured-img">
+            <img class="w-100" src="./assets/images/blog-room-booking.jpg" alt="Luxury Rooms">
+          </div>
+          <div class="blog-content px-4 pt-5 pb-4 position-relative">
+            <div class="blog-date">
+              <span class="day">25</span>
+              <span class="month">Jan</span>
+            </div>
+            <h3 class="blog-title">
+              <a href="#">Experience Luxury Stays at Affordable Prices</a>
+            </h3>
+            <p class="blog-description">
+              Our premium rooms offer comfort, privacy, and affordability. Book your stay today with exclusive discounts!
+            </p>
+            <div class="blog-readmore text-end">
+              <a class="text-black text-decoration-none" href="#">
+                Read More <i class="fa fa-angle-double-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="subscribe-us pb-5 mb-5">
+  <img class="d-none d-lg-block" src="./assets/images/subscribe-us.png" alt="" data-aos="fade-down-right">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2">
+      </div>
+      <div class="col-lg-8 d-flex flex-column flex-md-row align-items-lg-center">
+        <div class="content" data-aos="fade-right">
+          <h5 class="display-6 text-black">Subscribe to City West Updates</h5>
+          <p>
+            Get the latest updates on our menu, events, and special offers directly in your inbox.
+          </p>
+        </div>
+        <div class="subscribe-form d-flex ps-0 ms-0 ps-lg-5 ms-lg-5" data-aos="fade-left">
+          <div class="input-form w-100">
+            <input class="border-0 px-3 w-100" type="email" placeholder="Enter your email">
+          </div>
+          <div class="input-button">
+            <a class="text-decoration-none" href="#">
+              <i class="fa fa-paper-plane"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<a href="#" id="back-to-top">
+  <i class="fa-solid fa-angles-up"></i>
+</a>
+
+   <footer>
+  <div class="container">
+    <div class="row">
+      <div class="footer-content col-xl-8 px-4">
+        <div class="row">
+          <div class="col-lg-6 px-0">
+            <div class="logo" data-aos="fade-down-right">
+              <a href="./index.html">
+                <i class="fa fa-utensils me-3"></i>
+                <h1 class="mb-0">City West Restobar</h1>
+              </a>
+            </div>
+          </div>
+          <div data-aos="fade-down" class="col-lg-6 pt-4 pt-lg-0 d-flex align-items-center justify-content-start justify-content-lg-end">
+            <div class="social-icons d-flex">
+              <ul class="d-flex mb-0 ps-0">
+                <li class="mx-2"><a class="text-decoration-none text-white" href="#"><i class="fab fa-facebook"></i></a></li>
+                <li class="mx-2"><a class="text-decoration-none text-white" href="#"><i class="fab fa-twitter"></i></a></li>
+                <li class="mx-2"><a class="text-decoration-none text-white" href="#"><i class="fab fa-instagram"></i></a></li>
+                <li class="mx-2"><a class="text-decoration-none text-white" href="#"><i class="fab fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row pt-5 content-desc" data-aos="fade-right">
+          <p class="px-0">City West Restobar offers an exquisite dining experience with delicious meals, refreshing drinks, and a vibrant atmosphere. Located in City-West, we provide the perfect blend of entertainment, comfort, and quality service.</p>
+        </div>
+        <div class="row" data-aos="fade-right">
+          <div class="d-flex flex-column flex-lg-row px-0 justify-content-between">
+            <div class="location d-flex align-items-center pe-2 py-3">
+              <i class="fa-solid fa-location-dot text-white fa-2x border-bottom pb-2"></i>
+              <div class="ps-3">
+                <p class="mb-0">
+                  City-West, Rusizi District <br>
+                  Gihundwe, Burunga Cell
+                </p>
+              </div>
+            </div>
+            <div class="location d-flex align-items-center pe-2 py-3">
+              <i class="fa-solid fa-mobile text-white fa-2x border-bottom pb-2"></i>
+              <div class="ps-3">
+                <p class="mb-0">
+                  +250 789 221 794 <br>
+                  +250 787 173 024
+                </p>
+              </div>
+            </div>
+            <div class="location d-flex align-items-center pe-2 py-3">
+              <i class="fa-solid fa-envelope text-white fa-2x border-bottom pb-2"></i>
+              <div class="ps-3">
+                <p class="mb-0">
+                  info@citywestrestobar.com <br>
+                  support@citywestrestobar.com
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4">
+        <div class="reservation-box" data-aos="fade-down-left">
+          <div class="reservation-wrapper">
+            <h2>Open Hour</h2>
+            <div class="reservation-date-time">
+              <p>Tuesday - Sunday: ........... 8AM - 11PM</p>
+              <p>Monday: ...................... Closed</p>
+            </div>
+            <h2 class="pb-2">Reservation Numbers</h2>
+            <h3>+250 789 221 794</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <p class="text-center pt-4 mt-3 pt-lg-0">&copy; <span id="copyrightCurrentYear"></span> <b>City West Restobar.</b> All rights reserved. Website by <a href="#" class="fw-bold author-name">Joseph Nishimwe</a></p>
+    </div>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="./assets/js/script.js"></script>
