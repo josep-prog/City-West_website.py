@@ -1,0 +1,202 @@
+/* Media queries for mobile responsiveness */
+
+/* For screens 768px and below (tablets and below) */
+@media screen and (max-width: 768px) {
+    /* Adjust container width for smaller screens */
+    .container {
+        width: 90%;
+    }
+
+    /* Stack navigation items vertically and center-align */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    /* Adjust header text size and padding */
+    header {
+        padding: 60px 0;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1.1em;
+    }
+
+    /* Adjust the main content section */
+    .main-content h2 {
+        font-size: 1.8em;
+    }
+
+    .main-content p {
+        font-size: 1.1em;
+    }
+
+    /* Adjust card layout for smaller screens */
+    .card {
+        margin: 10px 0;
+        padding: 20px;
+    }
+
+    .card h3 {
+        font-size: 1.4em;
+    }
+
+    .card p {
+        font-size: 1em;
+    }
+
+    /* Adjust button size */
+    button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    /* Footer adjustments */
+    footer {
+        padding: 20px 0;
+    }
+
+    footer .social-media a {
+        margin: 0 8px;
+        font-size: 1em;
+    }
+}
+
+/* For screens 480px and below (mobile devices) */
+@media screen and (max-width: 480px) {
+    /* Further reduce container width */
+    .container {
+        width: 95%;
+    }
+
+    /* Make header text even smaller for mobile */
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    /* Stack cards vertically and reduce text size */
+    .card {
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    .card h3 {
+        font-size: 1.3em;
+    }
+
+    .card p {
+        font-size: 0.9em;
+    }
+
+    /* Button adjustments */
+    button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    /* Footer adjustments */
+    footer {
+        font-size: 0.9em;
+    }
+
+    footer .social-media a {
+        margin: 0 5px;
+        font-size: 0.9em;
+    }
+}
+
+/* For very small screens (portrait mobile phones) */
+@media screen and (max-width: 320px) {
+    /* Adjust header and body text further */
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header p {
+        font-size: 0.9em;
+    }
+
+    .main-content h2 {
+        font-size: 1.6em;
+    }
+
+    .main-content p {
+        font-size: 0.9em;
+    }
+
+    .card h3 {
+        font-size: 1.2em;
+    }
+
+    .card p {
+        font-size: 0.8em;
+    }
+
+    /* Button adjustments */
+    button {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+
+    /* Footer adjustments */
+    footer {
+        font-size: 0.8em;
+    }
+
+    footer .social-media a {
+        margin: 0 4px;
+        font-size: 0.8em;
+    }
+}
+
+/* Additional Responsive Adjustments for Google Map */
+@media screen and (max-width: 768px) {
+    #map iframe {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #map iframe {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    #map iframe {
+        height: 200px;
+    }
+}
+
+/* Responsive Adjustments for Back to Top Button */
+@media screen and (max-width: 768px) {
+    #back-to-top {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px;
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #back-to-top {
+        bottom: 10px;
+        right: 10px;
+        padding: 6px;
+        font-size: 0.8em;
+    }
+}

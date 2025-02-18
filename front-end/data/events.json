@@ -1,0 +1,49 @@
+{
+    "events": [
+      {
+        "id": 1,
+        "name": "Live Music Night",
+        "description": "Join us for an unforgettable night of live music performances by local artists. Enjoy great music, food, and drinks in a vibrant atmosphere.",
+        "date": "2025-02-25T19:00:00",
+        "location": "City West View Restobar",
+        "price": 2000,
+        "image": "images/live-music-night.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Valentine's Day Special",
+        "description": "Celebrate love with a romantic dinner set in our beautifully decorated dining area. Special menu and offers for couples.",
+        "date": "2025-02-14T18:00:00",
+        "location": "City West View Restobar",
+        "price": 10000,
+        "image": "images/valentines-day-special.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Trivia Night",
+        "description": "Test your knowledge and compete with friends in a fun and interactive trivia night! Prizes for the winning team.",
+        "date": "2025-03-10T20:00:00",
+        "location": "City West View Restobar",
+        "price": 1500,
+        "image": "images/trivia-night.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Karaoke Party",
+        "description": "Sing your heart out at our karaoke party! Grab the microphone and perform your favorite songs with friends.",
+        "date": "2025-03-20T21:00:00",
+        "location": "City West View Restobar",
+        "price": 2500,
+        "image": "images/karaoke-party.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Food & Drink Tasting Event",
+        "description": "A guided tasting experience featuring a selection of gourmet food and premium drinks. Perfect for foodies and connoisseurs alike.",
+        "date": "2025-04-05T17:00:00",
+        "location": "City West View Restobar",
+        "price": 5000,
+        "image": "images/food-drink-tasting.jpg"
+      }
+    ]
+  }  

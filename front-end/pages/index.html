@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City West View | Resto-Bar & Rooms</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/theme.css"> <!-- Theme-specific styles -->
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="bg-dark text-white p-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="#" class="text-white h3">City West View</a>
+            <nav>
+                <ul class="list-unstyled d-flex mb-0">
+                    <li class="ms-3"><a href="#about" class="text-white">About</a></li>
+                    <li class="ms-3"><a href="../pages/menu.html" class="text-white">Menu</a></li>
+                    <li class="ms-3"><a href="../pages/rooms.html" class="text-white">Rooms</a></li>
+                    <li class="ms-3"><a href="../pages/events.html" class="text-white">Events</a></li>
+                    <li class="ms-3"><a href="../pages/contact.html" class="text-white">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero bg-primary text-white text-center py-5" data-aos="fade-up">
+        <div class="container">
+            <h1 class="display-4">Welcome to City West View</h1>
+            <p class="lead">Your Ultimate Dining & Stay Experience</p>
+            <a href="menu.html" class="btn btn-light btn-lg">Explore Our Menu</a>
+            <a href="rooms.html" class="btn btn-outline-light btn-lg ms-3">Book a Room</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5" data-aos="fade-up">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h2>About Us</h2>
+                    <p>At City West View, we bring you an unparalleled dining and lodging experience in a relaxing and welcoming environment. Whether you're here for a cozy dinner with family, a business gathering, or a weekend getaway, we provide the best in comfort and service. Enjoy delicious meals prepared with the finest ingredients while savoring the breathtaking views.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="assets/images/restaurant.jpg" alt="City West View" class="img-fluid rounded shadow-sm">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Services Section -->
+    <section class="bg-light py-5" data-aos="fade-up">
+        <div class="container">
+            <h2 class="text-center">Our Services</h2>
+            <div class="row">
+                <!-- Dining -->
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm">
+                        <img src="assets/images/dining.jpg" alt="Dining" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Dining</h5>
+                            <p class="card-text">Indulge in a variety of delicious dishes from our diverse menu. From local to international flavors, we have something for everyone.</p>
+                            <a href="menu.html" class="btn btn-primary">See Our Menu</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Accommodation -->
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm">
+                        <img src="assets/images/room.jpg" alt="Accommodation" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Accommodation</h5>
+                            <p class="card-text">Book one of our comfortable rooms for a peaceful stay. We offer a range of rooms to suit your needs and budget.</p>
+                            <a href="rooms.html" class="btn btn-primary">Book a Room</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Events -->
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm">
+                        <img src="assets/images/events.jpg" alt="Events" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Events</h5>
+                            <p class="card-text">Join us for exciting events happening throughout the year. Whether it’s live music, themed nights, or special gatherings, there's always something to enjoy.</p>
+                            <a href="events.html" class="btn btn-primary">View Events</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonials Section -->
+    <section class="bg-dark text-white py-5" data-aos="fade-up">
+        <div class="container text-center">
+            <h2 class="mb-4">What Our Guests Say</h2>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <p class="fs-4">“The best dining experience I've had in a long time. The food was amazing, and the view is just perfect!”</p>
+                        <p>- John Doe</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="fs-4">“Loved the cozy atmosphere! The rooms are clean, and the staff is incredibly friendly. Highly recommend!”</p>
+                        <p>- Jane Smith</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p class="fs-4">“Perfect spot for a weekend getaway. Great food, great service, and an even better view!”</p>
+                        <p>- Mark Adams</p>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2025 City West View | All Rights Reserved</p>
+            <p>
+                <a href="https://www.facebook.com" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com" class="text-white"><i class="fab fa-instagram"></i></a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

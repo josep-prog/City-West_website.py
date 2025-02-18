@@ -1,0 +1,44 @@
+{
+    "rooms": [
+      {
+        "id": 1,
+        "name": "Standard Room",
+        "description": "A cozy room with all the essential amenities for a comfortable stay. Ideal for solo travelers or couples.",
+        "price_per_night": 7000,
+        "amenities": ["Free Wi-Fi", "Air Conditioning", "Flat Screen TV", "Queen Bed", "Room Service"],
+        "image": "images/standard-room.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Deluxe Room",
+        "description": "Spacious room offering a premium stay with upgraded furnishings and a beautiful view. Perfect for guests seeking extra comfort.",
+        "price_per_night": 12000,
+        "amenities": ["Free Wi-Fi", "Air Conditioning", "Flat Screen TV", "King Bed", "Room Service", "Mini Bar", "Balcony"],
+        "image": "images/deluxe-room.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Executive Suite",
+        "description": "Luxurious suite designed for business travelers or those seeking ultimate comfort. Includes a separate living area and work desk.",
+        "price_per_night": 20000,
+        "amenities": ["Free Wi-Fi", "Air Conditioning", "Flat Screen TV", "King Bed", "Room Service", "Mini Bar", "Work Desk", "Separate Living Area"],
+        "image": "images/executive-suite.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Presidential Suite",
+        "description": "Our most luxurious suite with a private living room, dining area, and panoramic views of the city. Perfect for high-end guests.",
+        "price_per_night": 50000,
+        "amenities": ["Free Wi-Fi", "Air Conditioning", "Flat Screen TV", "King Bed", "Room Service", "Mini Bar", "Private Living Room", "Dining Area", "Panoramic View"],
+        "image": "images/presidential-suite.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Family Room",
+        "description": "Spacious room with multiple beds, ideal for families or groups. Includes all necessary amenities for a comfortable stay.",
+        "price_per_night": 15000,
+        "amenities": ["Free Wi-Fi", "Air Conditioning", "Flat Screen TV", "Two Queen Beds", "Room Service", "Mini Bar", "Family Friendly"],
+        "image": "images/family-room.jpg"
+      }
+    ]
+  }  

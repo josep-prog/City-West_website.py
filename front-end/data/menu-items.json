@@ -1,0 +1,58 @@
+{
+    "menu": [
+      {
+        "id": 1,
+        "name": "Grilled Chicken Salad",
+        "description": "A fresh mix of lettuce, tomatoes, cucumbers, and grilled chicken breast, topped with a light vinaigrette dressing.",
+        "price": 5000,
+        "ingredients": ["Lettuce", "Tomatoes", "Cucumbers", "Chicken Breast", "Vinaigrette Dressing"],
+        "dietary_restrictions": ["Gluten-Free", "Dairy-Free"],
+        "image": "images/grilled-chicken-salad.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Beef Burger",
+        "description": "Juicy beef patty served with lettuce, tomatoes, pickles, onions, and a side of crispy fries.",
+        "price": 7000,
+        "ingredients": ["Beef Patty", "Lettuce", "Tomatoes", "Pickles", "Onions", "Fries"],
+        "dietary_restrictions": ["Contains Gluten"],
+        "image": "images/beef-burger.jpg"
+      },
+      {
+        "id": 3,
+        "name": "Vegetarian Pizza",
+        "description": "A thin-crust pizza topped with mozzarella cheese, bell peppers, onions, mushrooms, and olives.",
+        "price": 8000,
+        "ingredients": ["Mozzarella Cheese", "Bell Peppers", "Onions", "Mushrooms", "Olives"],
+        "dietary_restrictions": ["Vegetarian", "Contains Dairy"],
+        "image": "images/vegetarian-pizza.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Spaghetti Bolognese",
+        "description": "Classic Italian pasta with a rich and savory ground beef tomato sauce.",
+        "price": 6000,
+        "ingredients": ["Spaghetti", "Ground Beef", "Tomatoes", "Garlic", "Onions", "Herbs"],
+        "dietary_restrictions": ["Contains Gluten", "Contains Dairy"],
+        "image": "images/spaghetti-bolognese.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Chicken Stir-Fry",
+        "description": "Stir-fried chicken with mixed vegetables served over a bed of rice.",
+        "price": 5500,
+        "ingredients": ["Chicken Breast", "Mixed Vegetables", "Rice", "Soy Sauce"],
+        "dietary_restrictions": ["Gluten-Free"],
+        "image": "images/chicken-stir-fry.jpg"
+      },
+      {
+        "id": 6,
+        "name": "Mango Smoothie",
+        "description": "A refreshing smoothie made with fresh mangoes, yogurt, and a touch of honey.",
+        "price": 3500,
+        "ingredients": ["Mangoes", "Yogurt", "Honey"],
+        "dietary_restrictions": ["Vegetarian", "Contains Dairy"],
+        "image": "images/mango-smoothie.jpg"
+      }
+    ]
+  }  

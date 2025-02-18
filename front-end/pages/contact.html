@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | City West View Restobar</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/theme.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="../pages/index.html">Home</a></li>
+                <li><a href="../pages/menu.html">Menu</a></li>
+                <li><a href="../pages/rooms.html">Rooms</a></li>
+                <li><a href="../pages/events.html">Events</a></li>
+                <li><a href="../pages/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <section id="contact-us">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p class="intro-text">We’d love to hear from you! Whether you have a question, suggestion, or just want to say hi, feel free to get in touch with us using the form below or through the contact details provided.</p>
+            
+            <div class="contact-wrapper">
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h2>Send Us a Message</h2>
+                    <form action="submit_contact_form.php" method="POST" id="contact-form" onsubmit="showLoadingSpinner(event)">
+                        <div class="form-group">
+                            <label for="name">Your Name:</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email:</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message:</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit">Send Message</button>
+                    </form>
+
+                    <!-- Loading Spinner -->
+                    <div id="loading-spinner" class="loading-spinner">
+                        <img src="../assets/images/spinner.gif" alt="Loading...">
+                    </div>
+
+                    <!-- Success Message -->
+                    <div id="success-message" class="success-message">
+                        <i class="fas fa-check-circle"></i> Thank you! Your message has been sent successfully.
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2>Our Contact Details</h2>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Gihundwe, Rusizi District, Burunga Cell, Rwanda</li>
+                        <li><i class="fas fa-phone"></i> <strong>Phone:</strong> +250 789 221 794</li>
+                        <li><i class="fas fa-envelope"></i> <strong>Email:</strong> contact@citywestview.com</li>
+                        <li><i class="fas fa-clock"></i> <strong>Working Hours:</strong> Mon-Sun: 9:00 AM - 5:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Google Map Section -->
+            <div id="map">
+                <h2>Find Us Here</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.104502435077!2d28.940848215592476!3d-2.9466118999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19d1b9d1b13ffcd9%3A0x5d7790eeb1fcd50a!2sCity%20West%20View%20Restobar!5e0!3m2!1sen!2s!4v1676952822731!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About City West View</h3>
+                <p>Experience the perfect blend of comfort, taste, and entertainment at City West View. Whether you're here to enjoy our delicious meals, unwind with a refreshing drink, or relax in our cozy rooms, we guarantee top-tier service with affordability in mind. Our scenic location, lively atmosphere, and commitment to quality make us the ultimate destination for unforgettable moments. Explore our menu, book a room, or discover exciting events – all at City West View!</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../pages/index.html">Home</a></li>
+                    <li><a href="../pages/menu.html">Menu</a></li>
+                    <li><a href="../pages/rooms.html">Rooms</a></li>
+                    <li><a href="../pages/events.html">Events</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Gihundwe, Rusizi District, Burunga Cell, Rwanda</li>
+                    <li><i class="fas fa-phone"></i> +250 789 221 794</li>
+                    <li><i class="fas fa-envelope"></i> contact@citywestview.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 City West View Restobar. All rights reserved.</p>
+            <div class="social-media">
+                <a href="https://facebook.com/citywestview" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/citywestview" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com/citywestview" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Optional JavaScript -->
+    <script src="../js/main.js"></script>
+    <script>
+        // Show loading spinner and success message
+        function showLoadingSpinner(event) {
+            event.preventDefault(); // Prevent actual form submission for demo
+            document.getElementById('loading-spinner').style.display = 'block';
+            setTimeout(function() {
+                document.getElementById('loading-spinner').style.display = 'none';
+                document.getElementById('success-message').style.display = 'block';
+                document.getElementById('contact-form').reset(); // Clear the form
+            }, 2000); // Simulate a 2-second delay
+        }
+
+        // Back to Top Button
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById('back-to-top').style.display = 'block';
+            } else {
+                document.getElementById('back-to-top').style.display = 'none';
+            }
+        };
+
+        document.getElementById('back-to-top').onclick = function() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+/* Custom theme colors, fonts, etc. */
+
+/* Base colors */
+:root {
+    --primary-color: #4a4d4b;       /* Main accent color - deep green */
+    --secondary-color: #333;        /* Dark color for text and navigation */
+    --background-color: #F8F9FA;    /* Light gray background */
+    --card-background: #FFF;        /* White background for cards */
+    --hover-color: #202421;         /* Dark green for hover effect */
+    --footer-bg-color: #212529;     /* Dark footer background */
+    --footer-text-color: #FFF;      /* White footer text */
+    --text-color: #333;             /* Main text color */
+    --light-text-color: #FFF;       /* Light text color */
+    --border-radius: 10px;          /* Consistent border radius */
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Default box shadow */
+    --transition-speed: 0.3s;       /* Consistent transition speed */
+}
+
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif; /* Simple, clean font for readability */
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container for consistent layout */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 100px 0;
+    background-image: url('path_to_your_image.jpg'); /* Add your header image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3.5em;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Navigation bar */
+nav {
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: var(--light-text-color);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    transition: color var(--transition-speed) ease;
+}
+
+nav ul li a:hover {
+    color: var(--hover-color);
+}
+
+/* Main content section */
+.main-content {
+    padding: 60px 0;
+    background-color: var(--background-color);
+}
+
+.main-content h2 {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.main-content p {
+    font-size: 1.1em;
+    color: var(--text-color);
+    text-align: center;
+}
+
+/* Card styling for food menu, events, etc. */
+.card {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 25px;
+    margin-bottom: 20px;
+    transition: all var(--transition-speed) ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.6em;
+    color: var(--primary-color);
+    margin: 10px 0;
+}
+
+.card p {
+    color: var(--text-color);
+    font-size: 1.1em;
+}
+
+/* Button styling */
+button {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+button:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.05);
+}
+
+/* Footer styles */
+footer {
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer a {
+    color: var(--footer-text-color);
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+}
+
+footer a:hover {
+    color: var(--primary-color);
+}
+
+footer .social-media {
+    margin-top: 10px;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+    font-size: 1.2em;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    .main-content h2 {
+        font-size: 2em;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card h3 {
+        font-size: 1.4em;
+    }
+
+    .card p {
+        font-size: 1em;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .main-content h2 {
+        font-size: 1.8em;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card h3 {
+        font-size: 1.3em;
+    }
+
+    .card p {
+        font-size: 0.9em;
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .main-content h2 {
+        font-size: 1.6em;
+    }
+
+    .card h3 {
+        font-size: 1.2em;
+    }
+
+    .card p {
+        font-size: 0.8em;
+    }
+
+    button {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+}
