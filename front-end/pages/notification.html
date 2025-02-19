@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Notification System</title>
+    <!-- Include Bootstrap and Toastr CSS for styling -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f7f7;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .notification-container {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .notification-item {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .notification-item:hover {
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .notification-action {
+            cursor: pointer;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .notification-action:hover {
+            text-decoration: underline;
+        }
+
+        .btn-custom {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+
+        .button-container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Enhanced Notification System</h1>
+
+    <!-- Toggle buttons for notification types -->
+    <div class="button-container">
+        <button class="btn-custom" onclick="showSuccess()">Show Success</button>
+        <button class="btn-custom" onclick="showError()">Show Error</button>
+        <button class="btn-custom" onclick="showWarning()">Show Warning</button>
+        <button class="btn-custom" onclick="showInfo()">Show Info</button>
+    </div>
+
+    <!-- Notifications List -->
+    <div class="notification-container">
+        <div class="notification-item">
+            <div>
+                <strong>System Alert</strong><br>
+                <small>Important system update available.</small>
+            </div>
+            <div class="notification-action" onclick="dismissNotification(this)">Dismiss</div>
+        </div>
+        <div class="notification-item">
+            <div>
+                <strong>New Message</strong><br>
+                <small>You have a new message from John Doe.</small>
+            </div>
+            <div class="notification-action" onclick="dismissNotification(this)">Dismiss</div>
+        </div>
+        <div class="notification-item">
+            <div>
+                <strong>Warning</strong><br>
+                <small>Your subscription will expire soon.</small>
+            </div>
+            <div class="notification-action" onclick="dismissNotification(this)">Dismiss</div>
+        </div>
+    </div>
+
+    <script>
+        // Function to show notifications using Toastr.js
+        function showSuccess() {
+            toastr.success('This is a success message!', 'Success', {
+                positionClass: 'toast-top-center',
+                closeButton: true,
+                progressBar: true,
+                timeOut: 5000,
+                extendedTimeOut: 1000
+            });
+        }
+
+        function showError() {
+            toastr.error('Something went wrong. Please try again!', 'Error', {
+                positionClass: 'toast-top-center',
+                closeButton: true,
+                progressBar: true,
+                timeOut: 5000,
+                extendedTimeOut: 1000
+            });
+        }
+
+        function showWarning() {
+            toastr.warning('This is a warning! Pay attention.', 'Warning', {
+                positionClass: 'toast-top-center',
+                closeButton: true,
+                progressBar: true,
+                timeOut: 5000,
+                extendedTimeOut: 1000
+            });
+        }
+
+        function showInfo() {
+            toastr.info('Just an informational message.', 'Info', {
+                positionClass: 'toast-top-center',
+                closeButton: true,
+                progressBar: true,
+                timeOut: 5000,
+                extendedTimeOut: 1000
+            });
+        }
+
+        // Function to dismiss notifications from the list
+        function dismissNotification(element) {
+            $(element).closest('.notification-item').fadeOut();
+        }
+
+        // Add an animation to the notifications
+        $(document).ready(function() {
+            $('.notification-item').hide().fadeIn(1000);
+        });
+    </script>
+
+    <!-- Include Bootstrap JS for any required interaction features -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Link to main.js file -->
+    <script src="../js/main.js"></script>
+
+</body>
+</html>
