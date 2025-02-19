@@ -1,4 +1,14 @@
-// Main JavaScript file for interactivity
+// Import Toastr.js (if using a module bundler like Webpack or Vite)
+import toastr from 'toastr';
+import 'toastr/build/toastr.min.css';
+
+// Configure Toastr options
+toastr.options = {
+  closeButton: true,
+  progressBar: true,
+  positionClass: 'toast-bottom-right', // Change position as needed
+  timeOut: 5000, // Duration before disappearing (in milliseconds)
+};
 
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -44,10 +54,10 @@ scrollToTopButton.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Simple alert for button clicks (for demonstration purposes)
+// Replace alert with Toastr for button clicks
 document.querySelectorAll('.btn-alert').forEach(button => {
     button.addEventListener('click', () => {
-        alert('Button clicked!');
+        toastr.info('Button clicked!');
     });
 });
 
@@ -93,7 +103,9 @@ document.querySelectorAll('form').forEach(form => {
 
         if (!isValid) {
             e.preventDefault();
-            alert('Please fill out all required fields correctly.');
+            toastr.error('Please fill out all required fields correctly.');
+        } else {
+            toastr.success('Form submitted successfully!');
         }
     });
 });
@@ -108,10 +120,10 @@ if (roomBookingForm) {
 
         // Simulate room availability check
         if (checkInDate && checkOutDate) {
-            alert(`Checking availability for ${checkInDate} to ${checkOutDate}...`);
+            toastr.info(`Checking availability for ${checkInDate} to ${checkOutDate}...`);
             // Add AJAX call to backend for real availability check
         } else {
-            alert('Please select check-in and check-out dates.');
+            toastr.warning('Please select check-in and check-out dates.');
         }
     });
 }
@@ -124,10 +136,10 @@ if (healthMealForm) {
         const healthCondition = healthMealForm.querySelector('#health-condition').value;
 
         if (healthCondition) {
-            alert(`Customizing meals for ${healthCondition}...`);
+            toastr.info(`Customizing meals for ${healthCondition}...`);
             // Add logic to filter or customize meals based on health condition
         } else {
-            alert('Please select a health condition.');
+            toastr.warning('Please select a health condition.');
         }
     });
 }
@@ -141,10 +153,10 @@ if (eventRegistrationForm) {
         const attendeeName = eventRegistrationForm.querySelector('#attendee-name').value;
 
         if (eventName && attendeeName) {
-            alert(`Registering ${attendeeName} for ${eventName}...`);
+            toastr.success(`Registering ${attendeeName} for ${eventName}...`);
             // Add AJAX call to backend for event registration
         } else {
-            alert('Please fill out all required fields.');
+            toastr.error('Please fill out all required fields.');
         }
     });
 }
@@ -157,10 +169,10 @@ if (feedbackForm) {
         const feedbackMessage = feedbackForm.querySelector('#feedback-message').value;
 
         if (feedbackMessage) {
-            alert('Thank you for your feedback!');
+            toastr.success('Thank you for your feedback!');
             // Add AJAX call to backend to submit feedback
         } else {
-            alert('Please provide your feedback.');
+            toastr.warning('Please provide your feedback.');
         }
     });
 }
