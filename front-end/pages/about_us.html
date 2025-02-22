@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | City West View</title>
+  <title>Welcome to City West View</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
     /* General Styles */
     * {
@@ -14,8 +15,9 @@
     }
 
     body {
-      background-color: #f4f4f4;
+      background-color: #134294;
       color: #333;
+      line-height: 1.6;
     }
 
     a {
@@ -27,34 +29,45 @@
       list-style-type: none;
     }
 
-    header {
+    /* Container for site layout */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    /* Navigation Bar */
+    nav {
       background-color: #333;
-      color: #fff;
-      padding: 1rem;
+      color: #e8e8ef;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    header nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    nav ul {
+      list-style-type: none;
+      text-align: center;
+      padding: 0;
     }
 
-    header nav .logo h1 {
-      font-size: 2rem;
+    nav ul li {
+      display: inline-block;
+      margin: 0 15px;
     }
 
-    header nav ul {
-      display: flex;
-      gap: 2rem;
+    nav ul li a {
+      color: #e7e6f2;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      transition: color 0.3s ease;
     }
 
-    header nav ul li a {
-      color: #fff;
-      font-size: 1.2rem;
-    }
-
-    header nav ul li a:hover {
-      color: #eaeaea;
+    nav ul li a:hover {
+      color: #ff5722; /* Accent color for hover */
     }
 
     /* Hero Section */
@@ -62,31 +75,41 @@
       background-image: url('https://via.placeholder.com/1920x600');
       background-size: cover;
       background-position: center;
-      height: 50vh;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
       color: #fff;
+      text-align: center;
     }
 
     .hero .hero-content {
-      text-align: center;
+      max-width: 800px;
       padding: 1rem;
     }
 
-    .hero h2 {
-      font-size: 3rem;
+    .hero h1 {
+      font-size: 4rem;
       margin-bottom: 1rem;
+      animation: fadeIn 2s ease-in-out;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     }
 
     .hero p {
       font-size: 1.5rem;
+      animation: fadeIn 3s ease-in-out;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     /* About Section */
     .about {
-      padding: 3rem 0;
-      background-color: #fff;
+      padding: 4rem 0;
+      background-color: #f7f8fd;
     }
 
     .about .container {
@@ -96,6 +119,7 @@
       align-items: center;
       max-width: 1200px;
       margin: 0 auto;
+      padding: 0 1rem;
     }
 
     .about-text {
@@ -105,72 +129,104 @@
     .about-text h2 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
+      color: #333;
     }
 
     .about-text p {
       font-size: 1.2rem;
       line-height: 1.6;
+      color: #666;
     }
 
     .about-image {
       width: 50%;
+      text-align: center;
     }
 
     .about-image img {
       width: 100%;
       height: auto;
       border-radius: 10px;
-    }
-
-    /* Team Section */
-    .team {
-      padding: 3rem 0;
-      background-color: #f9f9f9;
-      text-align: center;
-    }
-
-    .team h2 {
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
-    }
-
-    .team-container {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-    }
-
-    .team-member {
-      background-color: #fff;
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      text-align: center;
-    }
-
-    .team-member img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      margin-bottom: 1rem;
-    }
-
-    .team-member h3 {
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .team-member p {
-      font-size: 1rem;
-      color: #666;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     /* Footer */
     footer {
       background-color: #333;
-      color: #fff;
+      color: white;
+      padding: 30px 0;
       text-align: center;
-      padding: 1rem;
+    }
+
+    footer a {
+      color: #eee8e8;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #ff5722;
+    }
+
+    footer .social-media {
+      margin-top: 10px;
+    }
+
+    footer .social-media a {
+      margin: 0 10px;
+      font-size: 1.2em;
+    }
+
+    /* Responsive Adjustments */
+    @media screen and (max-width: 768px) {
+      nav ul li {
+        display: block;
+        margin: 10px 0;
+      }
+
+      header h1 {
+        font-size: 2.5em;
+      }
+
+      .about .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-text, .about-image {
+        width: 100%;
+      }
+
+      .team-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+      }
+
+      .about-text h2 {
+        font-size: 2rem;
+      }
+
+      .about-text p {
+        font-size: 1rem;
+      }
+
+      .team-member {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -196,8 +252,8 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <h2>Welcome to City West View</h2>
-      <p>Where comfort, service, and experience come together.</p>
+      <h1>Welcome to City West View</h1>
+      <p>Your Ultimate Dining & Stay Experience</p>
     </div>
   </section>
 
@@ -209,26 +265,7 @@
         <p>At City West View, we strive to provide our guests with a memorable and comfortable experience. Our dedicated team works tirelessly to offer exceptional service, quality food, and relaxing rooms for every traveler. Whether you're here for a short visit or a long stay, we are committed to making your experience unforgettable.</p>
       </div>
       <div class="about-image">
-        <img src="https://via.placeholder.com/500x300" alt="City West View">
-      </div>
-    </div>
-  </section>
-
-  <!-- Team Section -->
-  <section class="team">
-    <h2>Meet Our Team</h2>
-    <div class="team-container">
-      <div class="team-member">
-        <img src="https://via.placeholder.com/150" alt="Team Member">
-        <h3>Tuyizere Jules</h3>
-        <p>Founder & CEO</p>
-        <p>Passionate about hospitality and creating unforgettable experiences for every guest.</p>
-      </div>
-      <div class="team-member">
-        <img src="https://via.placeholder.com/150" alt="Team Member">
-        <h3>Olive Umurerwa</h3>
-        <p>Operations Manager</p>
-        <p>Ensuring smooth operations and customer satisfaction are at the heart of everything we do.</p>
+        <img src="../asset/citywest-store/city_west_logo.png" alt="City West View">
       </div>
     </div>
   </section>
@@ -237,13 +274,16 @@
   <footer>
     <div class="footer-content">
       <p>&copy; 2025 City West View. All Rights Reserved.</p>
+      <div class="social-media">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
     </div>
   </footer>
 
   <script>
-    // You can add interactivity here if needed. 
-    // For example, this simple script changes the header background color when scrolling.
-
+    // Header background change on scroll
     window.onscroll = function () {
       const header = document.querySelector('header');
       if (window.scrollY > 50) {
