@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking & Ordering | City West View</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background-color: #f4f7f6;
+      color: #333;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    header {
+      background-color: #2d3a3f;
+      color: #fff;
+      padding: 1.5rem 0;
+    }
+
+    header nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+    }
+
+    header nav .logo h1 {
+      font-size: 2.5rem;
+    }
+
+    header nav ul {
+      display: flex;
+      gap: 2rem;
+    }
+
+    header nav ul li a {
+      color: #fff;
+      font-size: 1.2rem;
+    }
+
+    header nav ul li a:hover {
+      color: #eaeaea;
+    }
+
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .form-container p {
+      text-align: center;
+      color: #666;
+      font-size: 1.1rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .form-group textarea {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      height: 100px;
+    }
+
+    .form-container button {
+      padding: 1rem;
+      background-color: #2d3a3f;
+      color: #fff;
+      font-size: 1.5rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .form-container button:hover {
+      background-color: #1d2c2f;
+    }
+
+    .confirmation {
+      display: none;
+      text-align: center;
+      font-size: 1.2rem;
+      color: green;
+    }
+
+    footer {
+      background-color: #2d3a3f;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <div class="logo">
+        <h1>City West View</h1>
+      </div>
+      <ul>
+        <li><a href="/front-end/pages/index.html">Home</a></li>
+        <li><a href="/front-end/pages/rooms.html">Rooms</a></li>
+        <li><a href="/front-end/pages/menu.html">Menu</a></li>
+        <li><a href="/front-end/pages/events.html">Events</a></li>
+        <li><a href="/front-end/pages/contact.html">Contact</a></li>
+        <li><a href="/front-end/pages/about_us.html">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Form Container -->
+  <section class="form-container">
+    <h2>Book a Room or Order Food</h2>
+    <p>Fill in the details for booking a room or ordering food, and your request will be sent directly to our team.</p>
+
+    <form id="orderForm">
+      <!-- Order Type Selection -->
+      <div class="form-group">
+        <label for="order-type">What are you booking?</label>
+        <select id="order-type" name="order_type" required>
+          <option value="room">Room Booking</option>
+          <option value="food">Food Order</option>
+        </select>
+      </div>
+
+      <!-- Room Booking Details -->
+      <div id="room-details" class="order-details">
+        <div class="form-group">
+          <label for="check-in">Check-in Date</label>
+          <input type="date" id="check-in" name="check_in" required>
+        </div>
+
+        <div class="form-group">
+          <label for="check-out">Check-out Date</label>
+          <input type="date" id="check-out" name="check_out" required>
+        </div>
+
+        <div class="form-group">
+          <label for="room-type">Room Type</label>
+          <select id="room-type" name="room_type" required>
+            <option value="single">Single Room</option>
+            <option value="double">Double Room</option>
+            <option value="suite">Suite</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Food Order Details -->
+      <div id="food-details" class="order-details" style="display: none;">
+        <div class="form-group">
+          <label for="food-item">Food Item</label>
+          <input type="text" id="food-item" name="food_item" required>
+        </div>
+
+        <div class="form-group">
+          <label for="special-request">Special Request</label>
+          <textarea id="special-request" name="special_request"></textarea>
+        </div>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="form-group">
+        <label for="contact-number">Phone Number</label>
+        <input type="tel" id="contact-number" name="contact_number" placeholder="e.g., +250 789123456" required>
+      </div>
+
+      <div class="form-group">
+        <label for="contact-email">Email Address</label>
+        <input type="email" id="contact-email" name="contact_email" placeholder="e.g., john@example.com" required>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit">Submit Order</button>
+    </form>
+
+    <div id="confirmation" class="confirmation">
+      <p>Your request has been received! We'll send a confirmation via SMS and email.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 City West View. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Handle form submission
+    document.getElementById('orderForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Get form data
+      const formData = new FormData(this);
+      const orderType = formData.get('order_type');
+      const contactNumber = formData.get('contact_number');
+      const contactEmail = formData.get('contact_email');
+
+      let orderDetails = '';
+
+      // Gather order details based on type
+      if (orderType === 'room') {
+        const checkIn = formData.get('check_in');
+        const checkOut = formData.get('check_out');
+        const roomType = formData.get('room_type');
+        orderDetails = `Room Booking: ${roomType} from ${checkIn} to ${checkOut}`;
+      } else if (orderType === 'food') {
+        const foodItem = formData.get('food_item');
+        const specialRequest = formData.get('special_request');
+        orderDetails = `Food Order: ${foodItem} ${specialRequest ? `(Special Request: ${specialRequest})` : ''}`;
+      }
+
+      // Send order details to phone and email
+      sendSMS(contactNumber, orderDetails);
+      sendEmail(contactEmail, orderDetails);
+
+      // Display confirmation message
+      document.getElementById('confirmation').style.display = 'block';
+    });
+
+    // Toggle room/food sections based on order type
+    document.getElementById('order-type').addEventListener('change', function() {
+      const orderType = this.value;
+      document.getElementById('room-details').style.display = orderType === 'room' ? 'block' : 'none';
+      document.getElementById('food-details').style.display = orderType === 'food' ? 'block' : 'none';
+    });
+
+    // Mock SMS sending function
+    function sendSMS(number, message) {
+      console.log(`Sending SMS to ${number}: ${message}`);
+      // In a real scenario, integrate with an SMS API (e.g., Twilio)
+    }
+
+    // Mock email sending function
+    function sendEmail(email, message) {
+      console.log(`Sending email to ${email}: ${message}`);
+      // In a real scenario, integrate with an email service (e.g., SendGrid or NodeMailer)
+    }
+  </script>
+
+</body>
+</html>
